@@ -2,7 +2,7 @@
 ## cacheSolve computes the inverse of the special "matrix" returned by makeCacheMatrix above. 
 ## If the inverse has already been calculated (and the matrix has not changed), then the cachesolve should retrieve the inverse from the cache.
 
-## makeCacheMatrix take a square invertible matrix in parameter and init get and set function.
+## makeCacheMatrix take a square invertible matrix in parameter and init get, set, getinverse, setinverse functions.
 
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL
@@ -21,7 +21,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## cacheSolve take a makeCacheMatrix as parameter and return the inverse. 
+## cacheSolve take a makeCacheMatrix as parameter and return the inverse (from the cache if it's already in). 
 
 cacheSolve <- function(x, ...) {
   
